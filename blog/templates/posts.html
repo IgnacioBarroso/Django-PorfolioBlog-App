@@ -1,13 +1,26 @@
-<h1>Posts</h1>
+{% extends 'layout.html' %}
+  
+{% block content %}
 
-{% for post in posts %}
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.date }}</p>
-    <p>{{ post.description }}</p>
-    <img src="{{post.image.url}}" alt="">
-{% endfor %}
+<h1 class="text-center card card-body bg-black mb-4 mt-4 shadow-lg">Posts</h1>
 
-<h2>{{ post.title }}</h2>
-<p>{{ post.date }}</p>
-<p>{{ post.description }}</p>
-<img src="{{post.image.url}}" alt="">
+    {% for post in posts %}
+    
+    <div class="p-3">
+        <div class="card card-body bg-black">
+            <div class="row">
+                <div class="col-3">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.description | truncatechars:100 }}<a href="{% url 'blog:post' post.id %}">read more</a></p>
+                    <p>{{ post.date | date:'M d Y'}}</p>  
+                </div>
+                <div class="col-9">
+                    <img src="{{post.image.url}}" alt="{{ post.title }}" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+    
+{% endblock %}
