@@ -5,14 +5,14 @@
 {% load static %}
 
 <header class="row bg-black rounded p-4 mt-4 mb-2 shadow-lg">
-    <div class="col-md-4">
-        <img src="{% static 'portfolio/profile.jpg' %}" alt="">
+    <div class="col-md-4 text-center">
+        <img src="{% static 'portfolio/profile.jpg' %}" class="img-fluid img-thumbnail rounded" alt="Responsive image">
     </div>
     <div class="col-md-8 my-auto">
         <h1 class="mb-3">I am <strong>Ignacio Barroso</strong></h1>
         <h3 class="text-muted">Python Backend developer and Cloud & DevOps enthusiast</h3>
-        <p>I have professional training to implement solutions in the tech industry with web frameworks such as Flask, FastAPI and Django, with use of both SQL and NoSQL databases, data analysis with Pandas, Numpy and Matplotlib in collaborative environments like Deepnote and GoogleColab. Ability to deploy productive with Docker and clustering with Swarm on Ubuntu Server, in addition to extensive knowledge in Microsoft Azure and other cloud service providers of the most demanded for productive, scalable and high availability solutions. I also have good clean code practices, in order to be functional in work environments, and key skills in leadership and initiative.</p>
-        <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-primary rounded my-3">Download CV</a>
+        <p>I have professional training to implement solutions in the tech industry with web frameworks such as Flask, FastAPI and Django, with use of both SQL and NoSQL databases, data analysis with Pandas, Numpy and Matplotlib in collaborative environments like Deepnote and GoogleColab. Ability to productive deploy with Docker and clustering with Swarm on Ubuntu Server, in addition to extensive knowledge in Microsoft Azure and other Cloud Service providers of the most demanded for productive, scalable and high availability solutions. I also have good clean code practices, in order to be functional in work environments, and key skills in leadership and initiative.</p>
+        <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-primary rounded my-3" target="_blank">Download CV</a>
     </div>
 </header>
 
